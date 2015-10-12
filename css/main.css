@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'choplinextralight-demo';
+    src: url('../fonts/choplin-extralight-demo-webfont.eot');
+    src: url('../fonts/choplin-extralight-demo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/choplin-extralight-demo-webfont.woff2') format('woff2'),
+         url('../fonts/choplin-extralight-demo-webfont.woff') format('woff'),
+         url('../fonts/choplin-extralight-demo-webfont.ttf') format('truetype'),
+         url('../fonts/choplin-extralight-demo-webfont.svg#choplinextralight-demo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'choplinmedium-demo';
+    src: url('../fonts/choplin-medium-demo-webfont.eot');
+    src: url('../fonts/choplin-medium-demo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/choplin-medium-demo-webfont.woff2') format('woff2'),
+         url('../fonts/choplin-medium-demo-webfont.woff') format('woff'),
+         url('../fonts/choplin-medium-demo-webfont.ttf') format('truetype'),
+         url('../fonts/choplin-medium-demo-webfont.svg#choplinmedium-demo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: "Flaticon";
+    src: url("../fonts/flaticon.eot");
+    src: url("../fonts/flaticon.eot#iefix") format("embedded-opentype"),
+    url("../fonts/flaticon.woff") format("woff"),
+    url("../fonts/flaticon.ttf") format("truetype"),
+    url("../fonts/flaticon.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+    font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}.flaticon-login9:before {
+    content: "\e000";
+}
+.flaticon-metro1:before {
+    content: "\e001";
+}
+.flaticon-nation2:before {
+    content: "\e002";
+}
+.flaticon-placeholder46:before {
+    content: "\e003";
+    font-size: 30px;
+}
+.flaticon-transport544:before {
+    content: "\e004";
+}
+.flaticon-verified4:before {
+    content: "\e005";
+}
+body {
+    padding-top:70px;
+}
+
+
+
+html { height:100%; }
+
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .full {
+        height: 100%;
+        width: 100%;
+    }
+
+    .left {
+        background-color: #160c2c;
+        min-height: 100% !important;
+        text-align: center;
+        position: fixed;
+    }
+
+    .right {
+        float: right;
+        margin:0 0 0 0px;
+        background-color: white;
+        min-height: 100% !important;
+    }
+
+.city { width: 100%; }
+.logo, .city, .rails, .train { position: absolute; display: block; margin: 0 auto; left: 0; right: 0; top: 35%; }
+.train { top: 40%; }
+.rails { top: 60%; }
+.logo { top: 20%; font-family: 'choplinextralight-demo'; color: #fff; font-size: 50px; text-transform: uppercase; }
+.logo span { font-family: 'choplinmedium-demo'; color: #fff; font-size: 51px; margin-left: -48px; color: #ef4c5a; }
+.navbar-brand { display: none; top: 30px; font-family: 'choplinextralight-demo'; color: #fff; font-size: 30px; text-transform: uppercase; }
+.navbar-brand span { font-family: 'choplinmedium-demo'; color: #fff; font-size: 31px; margin-left: -28px; color: #ef4c5a; }
+.wrap { margin-top: 20px; }
+form { position: absolute; width: 80%; display: block; margin: 0 auto; left: 0; right: 0; top: 15%; }
+form h1 + p { font-size: 20px; margin-bottom: -15px; }
+.results { position: absolute; width: 80%; display: block; margin: 0 auto; left: 0; right: 0; top: 15%; }
+#first-train { display: block; font-size: 70px; text-align: center; margin: -15px 0 0 0; color: #ef4c5a; }
+#first-train span { font-size: 15px; display: block; text-transform: uppercase; color: #160c2c; margin-top: -5px; margin-bottom: 10px; }
+#second-result #first-train { display: block; font-size: 50px; text-align: center; margin: -15px 0 0 0; color: #ef4c5a; }
+.town { margin: 0; }
+.red { color: #ef4c5a; }
+
+.navbar-collapse { }
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse { max-height: 100%; }
+.navbar-nav { float: right; }
+.nav>li { font-family: 'choplinextralight-demo'; }
+.navbar-nav>li>a { padding-top: 10px; padding-bottom: 10px; }
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover { font-weight: bold; background: transparent; color: #ef4c5a; }
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus { color: #ef4c5a; }
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover { background: #ef4c5a; }
+
+.flaticon-placeholder46 { margin-left: -5px; }
+.btn { display: block; }
+.btn .flaticon { float: none; margin-right: 7px; margin-left: -36px; }
+.btn-group-lg>.btn, .btn-lg { padding-left: 0; padding-right: 0; text-align: center; }
+
+.wrap.select01  { opacity: 1; }
+.wrap.select01 + .wrap { opacity: 0.5; pointer-events: none; }
+.wrap.select01 + .wrap + .wrap { opacity: 0.5; pointer-events: none; }
+.wrap.select01.active + .wrap { opacity: 1; pointer-events: auto; }
+.wrap.select01.active + .wrap + .wrap { opacity: 1; pointer-events: auto; }
+
+table tr:nth-child(2n + 1) { background: #f0f0f0; }
+table tr th { background: #ef4c5a; color: #fff; }
+table tr th, table tr td { padding: 5px; }
+
+@media only screen and (min-device-width: 767px) and (max-device-width: 2000px) {
+.navbar-inverse { background: transparent; border: none; }
+}
+
+@media only screen and (min-device-width: 200px) and (max-device-width: 767px) {
+    body { margin-bottom: 40px; }
+    .row { margin: 0; }
+    .left { min-height: 50px !important; position: relative; }
+    .right { min-height: auto !important; height: auto !important; display: block;  }
+    .logo { font-size: 30px; top: 20%; }
+    .logo span { font-size: 31px; margin-left: -28px; }
+    .city, .train { display: none; }
+    .col-md-4, .col-md-12 { text-align: center; }
+    .glyphicon-send, .flaticon { float: left; margin-right: -24px; }
+    form { top: 0px; }
+    form h1 { font-size: 2rem; }
+    form h1 br { display: none; }
+    div.cs-skin-border { font-size: 1.3em !important; }
+    form h1 + p { font-size: 16px; }
+    .navbar-brand { display: block; }
+    .navbar-inverse { background: #160c2c !important; border: none; }
+    .navbar-toggle { float: right; }
+    .nav>li { font-size: 1.5em; text-align: center; }
+    .navbar-nav { float: left; width: 100%; margin: 30px 0; }
+}

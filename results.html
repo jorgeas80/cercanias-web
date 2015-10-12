@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Next Train</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/cs-select.css" />
+    <link rel="stylesheet" type="text/css" href="css/cs-skin-border.css" />
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Next <span>train</span></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>    
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row full">
+      <div class="col-md-6 col-xs-12 left">
+        <p class="logo">Next <span>train</span></p>
+        <figure><img src="img/city.svg" class="animated bounceInUp city" /></figure>
+        <figure><img src="img/rails.svg" class="rails animated fadeInDown hidden-xs" /></figure>
+        <figure><img src="img/train.svg" class="train animated tada" /></figure>
+      </div><!-- End Left -->
+
+      <div class="col-md-6 col-xs-12 right">
+        
+        <div class="results">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 id="city"><span class="flaticon flaticon-placeholder46" aria-hidden="true"></span> Madrid</h2>
+                </div>
+            </div>
+
+
+            <div class="row" id="first-result">
+                <div class="col-md-4">
+                    <span class="flaticon flaticon-transport544" aria-hidden="true"></span>
+                    <h4 id="fromStation" class="town">Pozuelo de Alarcón</h4>
+                    <p>LÍNEA C12</p>
+                </div>
+                <div class="col-md-4">
+                    <h2 id="first-train">08 <span>minutos</span></h2>
+                </div>
+                <div class="col-md-4">
+                    <span class="flaticon flaticon-transport544" aria-hidden="true"></span>
+                    <h4 id="toStation" class="town">Alcalá de Henares</h4>
+                    <p>LÍNEA C12</p>
+                </div>
+            </div><!-- End first-result -->
+
+            <hr>
+
+            <div class="row" id="second-result">
+                <div class="col-md-12"><p>SIGUIENTE</p></div>
+                <div class="col-md-4">
+                    <span class="flaticon flaticon-transport544" aria-hidden="true"></span>
+                    <h4 id="fromStation" class="town">Pozuelo de Alarcón</h4>
+                    <p>LÍNEA C12</p>
+                </div>
+                <div class="col-md-4">
+                    <h2 id="first-train">25 <span>minutos</span></h2>
+                </div>
+                <div class="col-md-4">
+                    <span class="flaticon flaticon-transport544" aria-hidden="true"></span>
+                    <h4 id="toStation" class="town">Alcalá de Henares</h4>
+                    <p>LÍNEA C12</p>
+                </div>
+            </div><!-- End second-result -->
+            
+            <hr>
+
+            <div class="row" id="all-results">
+                <div class="col-md-12">
+                    <p><a href="#"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> Consulta todos los horarios de esta línea hoy</a></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <a href="#" class="btn btn-default btn-lg btn-success"><span class="flaticon flaticon-login9" aria-hidden="true"></span> Volver</a>
+                </div>
+            </div>
+
+
+        </div><!-- End Results -->
+      </div><!-- End Right -->
+    
+    </div><!-- End Full -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/selectFx.js"></script>
+    <script>
+      (function() {
+        [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {  
+          new SelectFx(el);
+        } );
+      })();
+    </script>
+
+
+  </body>
+</html>

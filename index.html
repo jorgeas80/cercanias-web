@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ntApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Next Train</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/cs-select.css" />
+    <link rel="stylesheet" type="text/css" href="css/cs-skin-border.css" />
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Next <span>train</span></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>    
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row full">
+      <div class="col-md-6 col-xs-12 left">
+        <p class="logo">Next <span>train</span></p>
+        <figure><img src="img/city.svg" class="animated bounceInUp city" /></figure>
+        <figure><img src="img/rails.svg" class="rails animated fadeInDown hidden-xs" /></figure>
+        <figure><img src="img/train.svg" class="train animated tada" /></figure>
+      </div><!-- End Left -->
+
+      <div class="col-md-6 col-xs-12 right" ng-controller="mainController">
+        <form>
+          <h1>Entérate de cuánto queda para tu próximo tren de cercanías <strong class="red">en tiempo real</strong></h1>
+          <p>Selecciona</p>
+        <div class="wrap select01">
+          <select class="cs-select cs-skin-border" name="city">
+            <option value='selecciona' disabled selected>Ciudad</option>
+            <option value='A Coruña' >A Coruña</option>
+            <option value='álava'>Álava</option>
+            <option value='Albacete' >Albacete</option>
+            <option value='Alicante'>Alicante</option>
+            <option value='Almería' >Almería</option>
+            <option value='Asturias' >Asturias</option>
+            <option value='ávila' >Ávila</option>
+            <option value='Badajoz' >Badajoz</option>
+            <option value='Barcelona'>Barcelona</option>
+            <option value='Burgos' >Burgos</option>
+            <option value='Cáceres' >Cáceres</option>
+            <option value='Cádiz' >Cádiz</option>
+            <option value='Cantabria' >Cantabria</option>
+            <option value='Castellón' >Castellón</option>
+            <option value='Ceuta' >Ceuta</option>
+            <option value='Ciudad Real' >Ciudad Real</option>
+            <option value='Córdoba' >Córdoba</option>
+            <option value='Cuenca' >Cuenca</option>
+            <option value='Gerona' >Gerona</option>
+            <option value='Girona' >Girona</option>
+            <option value='Las Palmas' >Las Palmas</option>
+            <option value='Granada' >Granada</option>
+            <option value='Guadalajara' >Guadalajara</option>
+            <option value='Guipúzcoa' >Guipúzcoa</option>
+            <option value='Huelva' >Huelva</option>
+            <option value='Huesca' >Huesca</option>
+            <option value='Jaén' >Jaén</option>
+            <option value='La Rioja' >La Rioja</option>
+            <option value='León' >León</option>
+            <option value='Lleida' >Lleida</option>
+            <option value='Lugo' >Lugo</option>
+            <option value='Madrid' >Madrid</option>
+            <option value='Malaga' >Málaga</option>
+            <option value='Mallorca' >Mallorca</option>
+            <option value='Melilla' >Melilla</option>
+            <option value='Murcia' >Murcia</option>
+            <option value='Navarra' >Navarra</option>
+            <option value='Orense' >Orense</option>
+            <option value='Palencia' >Palencia</option>
+            <option value='Pontevedra'>Pontevedra</option>
+            <option value='Salamanca'>Salamanca</option>
+            <option value='Segovia' >Segovia</option>
+            <option value='Sevilla' >Sevilla</option>
+            <option value='Soria' >Soria</option>
+            <option value='Tarragona' >Tarragona</option>
+            <option value='Tenerife' >Tenerife</option>
+            <option value='Teruel' >Teruel</option>
+            <option value='Toledo' >Toledo</option>
+            <option value='Valencia' >Valencia</option>
+            <option value='Valladolid' >Valladolid</option>
+            <option value='Vizcaya' >Vizcaya</option>
+            <option value='Zamora' >Zamora</option>
+            <option value='Zaragoza'>Zaragoza</option>
+          </select>
+        </div>
+        <div class="wrap">
+          <select class="cs-select cs-skin-border" name="fromStation">
+            <option value="" disabled selected>Origen</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="yellow">Yellow</option>
+          </select>
+        </div>
+        <div class="wrap">
+          <select class="cs-select cs-skin-border" name="toStation">
+            <option value="" disabled selected>Destino</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="yellow">Yellow</option>
+          </select>
+        </div>
+      </form>
+      </div><!-- End Right -->
+    
+    </div><!-- End Full -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/selectFx.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+      (function() {
+        [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {  
+          new SelectFx(el);
+        } );
+      })();
+    </script>
+    <!--
+    <script>
+      var element = document.getElementById("select01"); //grab the element
+      element.onclick = function() { //asign a function
+        $(.cs-options).toggleClass("active");
+      }
+    </script>
+    -->
+    <script>
+      $('.cs-options').click(function() {
+        $(this).parent().parent().addClass("active");
+      });
+    </script>
+
+
+
+
+
+  </body>
+</html>
