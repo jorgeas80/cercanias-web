@@ -1,7 +1,7 @@
 {
     "name": "Nextrain",
-      "version": "1.0",
-      "description": "Web frontend for Cercanias API. HTML + CSS3 + AngularJS based",
+    "version": "1.0",
+    "description": "Web frontend for Cercanias API. HTML + CSS3 + AngularJS based",
     "dependencies": {
         "jquery": "latest",
         "angular": "latest",
