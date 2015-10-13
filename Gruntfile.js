@@ -16,5 +16,5 @@ grunt.initConfig({
 
 grunt.loadNpmTasks('grunt-bower-task');
 
-grunt.registerTask("bower-install", [ "bower-install-simple" ]);
+grunt.registerTask("bower-install", [ "bower" ]);
 };
