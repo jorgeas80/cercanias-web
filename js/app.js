@@ -13,7 +13,14 @@ ntApp.factory('HerokuRestangular', function(Restangular) {
 // CONTROLLERS
 ntApp.controller('mainController', function ($scope, Restangular) {
     Restangular.setBaseUrl('http://cercanias-api.herokuapp.com/');
-    $scope.cities = Restangular.all('city', {"format": "json"}).getList().$object;
+
+    var baseCities = Restangular.all('city');
+    // This will query /cities and return a promise.
+    baseCities.getList({"format": "json"}).then(function(cities) {
+        $scope.cities = cities;
+    });
+
+    //$scope.cities = Restangular.all('city').getList({"format": "json"}).$object;
 });
 
 
