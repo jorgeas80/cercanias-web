@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-        </div>    
+        </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
@@ -55,9 +55,9 @@
           <h1>Entérate de cuánto queda para tu próximo tren de cercanías <strong class="red">en tiempo real</strong></h1>
           <p>Selecciona</p>
         <div class="wrap select01">
-          <select class="cs-select cs-skin-border" name="city">
-            <option value='selecciona' disabled selected>Ciudad</option>
-            <option value='A Coruña' >A Coruña</option>
+          <select class="cs-select cs-skin-border" name="city" ng-model="selectedCity" ng-options="c.nucleo_name for c in cities track by c.nucleo_id">
+            <option value='0' disabled selected>Ciudad</option>
+            <!--<option value='A Coruña' >A Coruña</option>
             <option value='álava'>Álava</option>
             <option value='Albacete' >Albacete</option>
             <option value='Alicante'>Alicante</option>
@@ -109,7 +109,7 @@
             <option value='Valladolid' >Valladolid</option>
             <option value='Vizcaya' >Vizcaya</option>
             <option value='Zamora' >Zamora</option>
-            <option value='Zaragoza'>Zaragoza</option>
+            <option value='Zaragoza'>Zaragoza</option>-->
           </select>
         </div>
         <div class="wrap">
@@ -130,7 +130,7 @@
         </div>
       </form>
       </div><!-- End Right -->
-    
+
     </div><!-- End Full -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -139,11 +139,13 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/classie.js"></script>
     <script src="js/selectFx.js"></script>
-    <script src="js/angular.min.js"></script>
+    <script src="js/lodash.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/restangular.js"></script>
     <script src="js/app.js"></script>
     <script>
       (function() {
-        [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {  
+        [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
           new SelectFx(el);
         } );
       })();
@@ -161,10 +163,6 @@
         $(this).parent().parent().addClass("active");
       });
     </script>
-
-
-
-
 
   </body>
 </html>
