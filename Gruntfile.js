@@ -1,20 +1,22 @@
+'use strict';
 module.exports = function(grunt) {
-
-grunt.initConfig({
-    bower: {
-        install: {
+    grunt.initConfig({
+        "bower-install-simple": {
             options: {
-                targetDir: './public/vendor',
-                layout: 'byComponent',
-                install: true,
-                verbose: true,
-                cleanBowerDir: true
+                color: true,
+                directory: "lib"
+            },
+            "prod": {
+                options: {
+                    production: true
+                }
+            },
+            "dev": {
+                options: {
+                    production: false
+                }
             }
         }
-    }
-});
-
-grunt.loadNpmTasks('grunt-bower-task');
-
-grunt.registerTask("bower-install", [ "bower" ]);
+    });
+    grunt.registerTask("bower-install", [ "bower-install-simple" ]);
 };
