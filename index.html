@@ -55,23 +55,22 @@
           <h1>Entérate de cuánto queda para tu próximo tren de cercanías <strong class="red">en tiempo real</strong></h1>
           <p>Selecciona</p>
         <div class="wrap select01">
-          <select class="cs-skin-border" name="city" ng-model="selectedCity" ng-options="c.nucleo_name for c in cities track by c.nucleo_id">
+          <select class="cs-skin-border" name="selectedCity"
+            ng-model="selectedCity"
+            ng-options="c.nucleo_name for c in cities track by c.nucleo_id"
+            ng-change="selectedSrcSt=selectedCity.nucleo_stations[0]; selectedDstSt = selectedCity.nucleo_stations[0]">
           </select>
         </div>
         <div class="wrap">
-          <select class="cs-select cs-skin-border" name="fromStation">
-            <option value="" disabled selected>Origen</option>
-            <option value="red">Red</option>
-            <option value="blue">Blue</option>
-            <option value="yellow">Yellow</option>
+          <select class="cs-skin-border" name="fromStation"
+            ng-model="selectedSrcSt"
+            ng-options="st for st in selectedCity.nucleo_stations">
           </select>
         </div>
         <div class="wrap">
-          <select class="cs-select cs-skin-border" name="toStation">
-            <option value="" disabled selected>Destino</option>
-            <option value="red">Red</option>
-            <option value="blue">Blue</option>
-            <option value="yellow">Yellow</option>
+          <select class="cs-skin-border" name="toStation"
+            ng-model="selectedDstSt"
+            ng-options="st for st in selectedCity.nucleo_stations">
           </select>
         </div>
       </form>
