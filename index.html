@@ -150,16 +150,14 @@
         } );
       })();
     </script>
-    <!--
     <script>
       var element = document.getElementById("select01"); //grab the element
       element.onclick = function() { //asign a function
         $(.cs-options).toggleClass("active");
       }
     </script>
-    -->
     <script>
-      $('.cs-options').click(function() {
+      ('.cs-options').click(function() {
         $(this).parent().parent().addClass("active");
       });
     </script>
