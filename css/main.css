@@ -102,9 +102,13 @@ html { height:100%; }
 .logo span { font-family: 'choplinmedium-demo'; color: #fff; font-size: 51px; margin-left: -48px; color: #ef4c5a; }
 .navbar-brand { display: none; top: 30px; font-family: 'choplinextralight-demo'; color: #fff; font-size: 30px; text-transform: uppercase; }
 .navbar-brand span { font-family: 'choplinmedium-demo'; color: #fff; font-size: 31px; margin-left: -28px; color: #ef4c5a; }
-.wrap { margin-top: 20px; }
+.wrap { display: inline-block; margin: 0; margin-bottom: 20px; padding: 0; border: 5px solid #160c2c; width: 100%; border-radius: 3px; overflow: hidden; background-color: #fff; background: #fff url("../img/arrow.png") no-repeat 96% 50%; }
+.wrap select { padding: 12px 8px; font-size: 16px; width: 100%; border: none; box-shadow: none; background-color: transparent; background-image: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+.wrap select:focus { outline: none; }
+
+
 form { position: absolute; width: 80%; display: block; margin: 0 auto; left: 0; right: 0; top: 15%; }
-form h1 + p { font-size: 20px; margin-bottom: -15px; }
+form h1 + p { font-size: 20px;  }
 .results { position: absolute; width: 80%; display: block; margin: 0 auto; left: 0; right: 0; top: 15%; }
 #first-train { display: block; font-size: 70px; text-align: center; margin: -15px 0 0 0; color: #ef4c5a; }
 #first-train span { font-size: 15px; display: block; text-transform: uppercase; color: #160c2c; margin-top: -5px; margin-bottom: 10px; }
